@@ -1,0 +1,9 @@
+If 
+Case.Account.ParentID != null 
+read-- parent account, if 
+Parent Account "Allow_Child_Entitlements__c" is true, 
+read parent entitlements for the specific Case.ProductID = Entitlement.Product__c . 
+
+If the Parent Account has valid Entitlements for the product (status = Active, or status = Expired but expire date within grace period), then exit trigger.
+
+caseEntitlementChec
